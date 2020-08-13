@@ -1,0 +1,24 @@
+def borrar_palabras(palabras):
+    f = open("C:\\Users\\raulm\\OneDrive\\Desktop\\Python\\frankestein.txt", "r")
+    texto=list(f.read().split(" "))
+    for i in palabras:
+        texto.remove(i)
+    texto_final=" ".join(texto)
+    print(texto_final)
+    nuevo_texto=open("C:\\Users\\raulm\\OneDrive\\Desktop\\Python\\frankestein_new.txt", "w")
+    nuevo_texto.write(texto_final)
+    
+borrar_palabras(["This","eBook","is"])
+
+#texto original:
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.net
+
+#texto final:
+for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.net
+
